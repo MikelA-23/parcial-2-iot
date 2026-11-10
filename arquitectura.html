@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Las cuatro capas de un sistema IoT: percepción, red, procesamiento y aplicación, con un ejemplo de cada una.">
+    <title>Arquitectura | IoT Lab</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <a class="enlace-salto" href="#contenido">Saltar al contenido</a>
+    <header class="cabecera">
+        <div class="contenedor diseno-cabecera">
+            <a class="marca" href="index.html"><span class="marca-icono" aria-hidden="true">⬡</span> IOT LAB<span class="marca-subtitulo">Sensores en acción</span></a>
+            <nav aria-label="Navegación principal">
+                <ul class="menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="dispositivos.html">Dispositivos</a></li>
+                    <li><a href="casos-de-uso.html">Casos de uso</a></li>
+                    <li><a href="arquitectura.html" class="activo" aria-current="page">Arquitectura</a></li>
+                    <li><a href="video.html">Video</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main id="contenido" class="contenedor" tabindex="-1">
+        <section class="intro-pagina" aria-labelledby="arq-titulo"><p class="etiqueta">DE LA MEDICIÓN A LA RESPUESTA</p><h1 id="arq-titulo">Cuatro capas, un mismo recorrido.</h1><p class="intro">Todo sistema IoT mueve un dato a través de las mismas cuatro capas, sin importar si mide temperatura, tráfico o humedad.</p></section>
+
+        <!-- Cada capa se numera y se conecta visualmente con la siguiente. -->
+        <ol class="capas">
+            <li class="capa">
+                <div class="capa-marcador" aria-hidden="true">1</div>
+                <div class="capa-cuerpo">
+                    <h2>Capa de percepción</h2>
+                    <p>Aquí viven los sensores y actuadores: los componentes que tocan el mundo físico. Un sensor mide una variable (temperatura, movimiento, luz); un actuador ejecuta una acción física (abrir una válvula, encender un motor).</p>
+                    <p class="capa-ejemplo"><strong>Ejemplo:</strong> un sensor de humedad clavado en la tierra de un cultivo.</p>
+                </div>
+            </li>
+            <li class="capa">
+                <div class="capa-marcador" aria-hidden="true">2</div>
+                <div class="capa-cuerpo">
+                    <h2>Capa de red</h2>
+                    <p>El dato medido necesita viajar. Según la distancia y el consumo de energía disponible, se usa Wi-Fi, Bluetooth, redes móviles o protocolos de bajo consumo como Zigbee o LoRa.</p>
+                    <p class="capa-ejemplo"><strong>Ejemplo:</strong> el sensor envía la lectura de humedad por una red de bajo consumo hacia una estación base cercana.</p>
+                </div>
+            </li>
+            <li class="capa">
+                <div class="capa-marcador" aria-hidden="true">3</div>
+                <div class="capa-cuerpo">
+                    <h2>Capa de procesamiento</h2>
+                    <p>El dato llega a un servidor en la nube o se procesa directamente en el dispositivo (edge computing). Ahí se compara contra reglas, se cruza con otros datos y se decide si hace falta actuar.</p>
+                    <p class="capa-ejemplo"><strong>Ejemplo:</strong> un sistema en la nube determina que la humedad bajó del nivel mínimo configurado.</p>
+                </div>
+            </li>
+            <li class="capa">
+                <div class="capa-marcador" aria-hidden="true">4</div>
+                <div class="capa-cuerpo">
+                    <h2>Capa de aplicación</h2>
+                    <p>La decisión se traduce en algo visible: una notificación en una aplicación, un panel de control, o una orden directa a un actuador para que actúe sobre el mundo físico.</p>
+                    <p class="capa-ejemplo"><strong>Ejemplo:</strong> la aplicación del agricultor recibe la alerta y, al mismo tiempo, se activa la válvula de riego.</p>
+                </div>
+            </li>
+        </ol>
+    </main>
+    <footer class="pie">
+        <div class="contenedor diseno-pie"><p>IoT Lab · Sensores en acción</p><p>Proyecto académico sobre Internet de las Cosas</p><a href="#contenido">Volver al contenido ↑</a></div>
+    </footer>
+</body>
+</html>
