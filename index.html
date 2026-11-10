@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="IoT Lab: qué es el Internet de las Cosas, cómo funciona un sistema IoT y dónde se aplica hoy.">
+    <title>Inicio | IoT Lab</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <a class="enlace-salto" href="#contenido">Saltar al contenido</a>
+    <header class="cabecera">
+        <div class="contenedor diseno-cabecera">
+            <a class="marca" href="index.html"><span class="marca-icono" aria-hidden="true">⬡</span> IOT LAB<span class="marca-subtitulo">Sensores en acción</span></a>
+            <nav aria-label="Navegación principal">
+                <ul class="menu">
+                    <li><a href="index.html" class="activo" aria-current="page">Inicio</a></li>
+                    <li><a href="dispositivos.html">Dispositivos</a></li>
+                    <li><a href="casos-de-uso.html">Casos de uso</a></li>
+                    <li><a href="arquitectura.html">Arquitectura</a></li>
+                    <li><a href="video.html">Video</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main id="contenido" class="contenedor" tabindex="-1">
+        <!-- Un solo h1 identifica el tema principal de cada página. -->
+        <section class="portada" aria-labelledby="portada-titulo">
+            <div class="portada-texto">
+                <p class="etiqueta">INTERNET DE LAS COSAS</p>
+                <h1 id="portada-titulo">Objetos cotidianos,<br><span>convertidos en datos.</span></h1>
+                <p class="intro">Un sensor mide algo, lo envía por una red y un sistema responde sin que nadie toque un botón. Eso es el Internet de las Cosas: millones de objetos que escuchan su entorno y actúan en consecuencia.</p>
+                <div class="acciones"><a class="boton" href="dispositivos.html">Ver dispositivos <span aria-hidden="true">↗</span></a><a class="enlace-sutil" href="arquitectura.html">Entender cómo funciona →</a></div>
+            </div>
+            <aside class="portada-dato" aria-label="Dato destacado">
+                <p class="dato-numero">4</p>
+                <p class="dato-texto">capas trabajan juntas en cualquier sistema IoT: percepción, red, procesamiento y aplicación.</p>
+            </aside>
+        </section>
+
+        <figure class="portada-imagen">
+            <img src="IMG/red-iot.jpg" width="1200" height="500" alt="Red de sensores y dispositivos conectados entre sí mediante líneas de datos" loading="lazy">
+            <figcaption>Cada punto de la red es un sensor que escucha, mide y responde.</figcaption>
+        </figure>
+
+        <section class="franja-ideas" aria-label="Ideas clave sobre IoT">
+            <article class="idea"><span class="idea-icono" aria-hidden="true">◈</span><h2>Sensar</h2><p>El dispositivo mide temperatura, movimiento, humedad o cualquier otra variable física.</p></article>
+            <article class="idea"><span class="idea-icono" aria-hidden="true">◈</span><h2>Conectar</h2><p>El dato viaja por Wi-Fi, Bluetooth o redes móviles hasta un servidor o la nube.</p></article>
+            <article class="idea"><span class="idea-icono" aria-hidden="true">◈</span><h2>Actuar</h2><p>Un sistema analiza el dato y responde: enciende, apaga, alerta o ajusta algo automáticamente.</p></article>
+        </section>
+
+        <section class="seccion" aria-labelledby="explora-titulo">
+            <div class="seccion-cabecera"><p class="etiqueta">SIGUE EXPLORANDO</p><h2 id="explora-titulo">Tres formas de conocer más sobre IoT.</h2></div>
+            <div class="enlaces-explora">
+                <a class="explora-ficha" href="dispositivos.html"><span class="ficha-numero">01</span><h3>Dispositivos</h3><p>Una tabla comparativa con termostatos, pulseras, sensores de riego y más.</p></a>
+                <a class="explora-ficha" href="casos-de-uso.html"><span class="ficha-numero">02</span><h3>Casos de uso</h3><p>Ejemplos reales en hogares, ciudades, cultivos, hospitales y fábricas.</p></a>
+                <a class="explora-ficha" href="arquitectura.html"><span class="ficha-numero">03</span><h3>Arquitectura</h3><p>Las cuatro capas que convierten una medición en una acción automática.</p></a>
+            </div>
+        </section>
+    </main>
+    <footer class="pie">
+        <div class="contenedor diseno-pie"><p>IoT Lab · Sensores en acción</p><p>Proyecto académico sobre Internet de las Cosas</p><a href="#contenido">Volver al contenido ↑</a></div>
+    </footer>
+</body>
+</html>
