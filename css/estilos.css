@@ -1,0 +1,502 @@
+/* 1. APARIENCIA DEL DOCUMENTO */
+html {
+    color-scheme: dark;
+}
+
+/* 2. BASE Y MODELO DE CAJA */
+html, body, header, nav, main, section, article, aside, footer,
+div, span, h1, h2, h3, p, a, ul, ol, li, table, thead, tbody, tr, th, td, img, iframe {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    background: radial-gradient(ellipse at 12% 0%, #0b2b26 0, transparent 45%), #0a0f12;
+    color: #eef4f2;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.7;
+}
+h1, h2, h3, p, figure, table {
+    margin: 0;
+}
+h1, h2, h3 {
+    line-height: 1.15;
+}
+h1 {
+    font-size: clamp(2.4rem, 5vw, 4.4rem);
+    font-weight: 750;
+    letter-spacing: -0.04em;
+}
+h2 {
+    font-size: clamp(1.5rem, 2.8vw, 2.2rem);
+    letter-spacing: -0.02em;
+}
+h3 {
+    font-size: 1.3rem;
+}
+p {
+    color: #a7b3ae;
+}
+a {
+    color: #2dd4bf;
+    text-underline-offset: 0.25em;
+}
+a:hover {
+    color: #eef4f2;
+}
+a:focus {
+    outline: 3px solid #2dd4bf;
+    outline-offset: 5px;
+}
+
+/* 3. CONTENEDOR Y CABECERA */
+.contenedor {
+    width: min(72rem, calc(100% - 2rem));
+    margin-inline: auto;
+}
+.cabecera {
+    border-bottom: 1px solid #1f2b27;
+}
+.diseno-cabecera {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding-block: 1.3rem;
+}
+.marca {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    color: #eef4f2;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+}
+.marca-icono {
+    color: #2dd4bf;
+    font-size: 1.6rem;
+    line-height: 1;
+}
+.marca-subtitulo {
+    flex-basis: 100%;
+    margin-left: 2.1rem;
+    color: #a7b3ae;
+    font-size: 0.68rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.menu a {
+    display: block;
+    padding: 0.6rem 0.8rem;
+    border-radius: 0.5rem;
+    color: #a7b3ae;
+    text-decoration: none;
+    font-size: 0.88rem;
+}
+.menu a:hover {
+    background: #121a17;
+    color: #eef4f2;
+}
+.menu .activo {
+    background: #0e2a26;
+    color: #2dd4bf;
+}
+.enlace-salto {
+    position: absolute;
+    top: 0.5rem;
+    left: 1rem;
+    transform: translateY(-180%);
+    background: #eef4f2;
+    color: #0a0f12;
+    padding: 0.75rem;
+    z-index: 10;
+}
+.enlace-salto:focus {
+    transform: translateY(0);
+}
+
+/* 4. TEXTOS DE SECCIÓN */
+.seccion {
+    padding-block: clamp(2.5rem, 6vw, 4.5rem);
+}
+.seccion-cabecera {
+    max-width: 40rem;
+    margin-bottom: 1.8rem;
+}
+.etiqueta {
+    color: #2dd4bf;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.9rem;
+}
+.intro {
+    font-size: 1.05rem;
+    max-width: 40rem;
+    margin-top: 1.3rem;
+}
+.parrafo-ancho {
+    max-width: 48rem;
+}
+.intro-pagina {
+    padding-block: clamp(2.8rem, 6vw, 5rem) 2.2rem;
+}
+
+/* 5. PORTADA
+   Grid en lugar de flexbox: dos columnas de ancho distinto desde 50rem.
+   El dato destacado se apoya sobre una tarjeta con borde propio. */
+.portada {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.2rem;
+    padding-block: clamp(2.8rem, 6vw, 5rem);
+    align-items: center;
+}
+.portada-texto h1 span {
+    color: #2dd4bf;
+}
+.acciones {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.4rem;
+    margin-top: 1.8rem;
+}
+.boton {
+    display: inline-flex;
+    gap: 1.2rem;
+    align-items: center;
+    padding: 0.8rem 1.2rem;
+    border-radius: 0.6rem;
+    background: #2dd4bf;
+    color: #042420;
+    font-weight: 700;
+    text-decoration: none;
+}
+.boton:hover {
+    background: #8fecdf;
+    color: #042420;
+}
+.enlace-sutil {
+    font-size: 0.88rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+.portada-dato {
+    padding: 1.8rem;
+    border: 1px solid #1f2b27;
+    border-radius: 1.1rem;
+    background: #101815;
+}
+.dato-numero {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #2dd4bf;
+    line-height: 1;
+}
+.dato-texto {
+    margin-top: 0.8rem;
+    color: #a7b3ae;
+    font-size: 0.92rem;
+}
+
+/* IMAGEN DE PORTADA
+   Imagen ancha de apoyo entre la portada y la franja de ideas. */
+.portada-imagen {
+    margin: 0 0 2.5rem;
+}
+.portada-imagen img {
+    display: block;
+    width: 100%;
+    max-height: 22rem;
+    object-fit: cover;
+    border: 1px solid #1f2b27;
+    border-radius: 1.1rem;
+}
+.portada-imagen figcaption {
+    margin-top: 0.75rem;
+    font-size: 0.8rem;
+    color: #a7b3ae;
+}
+
+/* 6. FRANJA DE IDEAS
+   Tres pasos en línea (Sensar, Conectar, Actuar); grid reparte el espacio
+   en partes iguales y pasa a una columna en pantallas angostas. */
+.franja-ideas {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    padding-block: 2.5rem;
+    border-top: 1px solid #1f2b27;
+    border-bottom: 1px solid #1f2b27;
+}
+.idea-icono {
+    display: block;
+    color: #2dd4bf;
+    font-size: 1.1rem;
+    margin-bottom: 0.9rem;
+}
+.idea h2 {
+    font-size: 1.15rem;
+}
+.idea p {
+    margin-top: 0.6rem;
+    font-size: 0.92rem;
+}
+
+/* 7. FICHAS DE EXPLORACIÓN */
+.enlaces-explora {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+}
+.explora-ficha {
+    display: block;
+    padding: 1.5rem;
+    border: 1px solid #1f2b27;
+    border-radius: 1.1rem;
+    background: #101815;
+    text-decoration: none;
+    color: inherit;
+}
+.explora-ficha:hover {
+    border-color: #2dd4bf;
+}
+.ficha-numero {
+    display: block;
+    font-size: 0.68rem;
+    color: #2dd4bf;
+    letter-spacing: 0.12em;
+    margin-bottom: 1.2rem;
+}
+.explora-ficha h3 {
+    font-size: 1.25rem;
+}
+.explora-ficha p {
+    margin-top: 0.8rem;
+    font-size: 0.92rem;
+}
+
+/* 8. TABLA DE DISPOSITIVOS
+   overflow-x permite desplazamiento horizontal en pantallas angostas
+   sin romper el diseño del resto de la página. */
+.tabla-envoltorio {
+    overflow-x: auto;
+    border: 1px solid #1f2b27;
+    border-radius: 1rem;
+    margin-bottom: 2.5rem;
+}
+.tabla-dispositivos {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 42rem;
+}
+.tabla-titulo {
+    caption-side: top;
+    text-align: left;
+    padding: 1.2rem 1.2rem 0;
+    font-size: 0.78rem;
+    color: #a7b3ae;
+}
+.tabla-dispositivos th,
+.tabla-dispositivos td {
+    text-align: left;
+    padding: 1rem 1.2rem;
+    border-bottom: 1px solid #1f2b27;
+    font-size: 0.92rem;
+}
+.tabla-dispositivos thead th {
+    color: #2dd4bf;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border-bottom: 1px solid #2dd4bf;
+}
+.tabla-dispositivos tbody th {
+    color: #eef4f2;
+    font-weight: 600;
+}
+.tabla-dispositivos tbody tr:last-child th,
+.tabla-dispositivos tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+/* 9. LISTA DE CASOS DE USO
+   Cada caso ocupa su propio bloque con un número grande como referencia
+   visual; no depende de imágenes para diferenciarse. */
+.lista-casos {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    padding-bottom: 3rem;
+}
+.caso {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #1f2b27;
+    border-radius: 1.1rem;
+    background: #101815;
+    overflow: hidden;
+}
+.caso-imagen {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+.caso-cuerpo {
+    padding: 1.8rem;
+}
+.caso-numero {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: #2dd4bf;
+    margin-bottom: 0.9rem;
+}
+.caso h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.9rem;
+}
+.caso p {
+    margin-bottom: 0.8rem;
+}
+.caso-ejemplo {
+    margin-bottom: 0;
+    color: #eef4f2;
+    font-size: 0.9rem;
+}
+.caso-ejemplo strong {
+    color: #2dd4bf;
+}
+
+/* 10. DIAGRAMA DE CAPAS
+   Lista ordenada sin viñetas; el marcador numerado y una línea vertical
+   conectan cada capa con la siguiente, sin usar imágenes. */
+.capas {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 3rem;
+    counter-reset: capa;
+}
+.capa {
+    position: relative;
+    display: flex;
+    gap: 1.3rem;
+    padding-bottom: 2.4rem;
+}
+.capa:last-child {
+    padding-bottom: 0;
+}
+.capa::before {
+    content: "";
+    position: absolute;
+    left: 1.15rem;
+    top: 2.6rem;
+    bottom: 0;
+    width: 1px;
+    background: #1f2b27;
+}
+.capa:last-child::before {
+    display: none;
+}
+.capa-marcador {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.3rem;
+    height: 2.3rem;
+    border-radius: 50%;
+    border: 1px solid #2dd4bf;
+    color: #2dd4bf;
+    font-weight: 700;
+}
+.capa-cuerpo {
+    padding-top: 0.2rem;
+}
+.capa-cuerpo p {
+    margin-top: 0.7rem;
+}
+.capa-ejemplo {
+    color: #eef4f2;
+    font-size: 0.9rem;
+}
+.capa-ejemplo strong {
+    color: #2dd4bf;
+}
+
+/* 11. REPRODUCTOR DE VIDEO */
+.seccion-video {
+    max-width: 58rem;
+    margin-inline: auto;
+    padding-bottom: 3.5rem;
+}
+.seccion-video h2 {
+    margin-bottom: 1.3rem;
+}
+.marco-video {
+    aspect-ratio: 16 / 9;
+    border: 1px solid #1f2b27;
+    border-radius: 1.1rem;
+    overflow: hidden;
+    background: #101815;
+}
+.marco-video iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+.video-nota {
+    margin-top: 1rem;
+    font-size: 0.88rem;
+}
+
+/* 12. PIE DE PÁGINA */
+.pie {
+    border-top: 1px solid #1f2b27;
+    font-size: 0.78rem;
+}
+.diseno-pie {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-block: 1.7rem;
+}
+
+/* 13. ADAPTACIÓN A PANTALLAS
+   A partir de 50rem hay columnas en la portada y tres en la franja de
+   ideas, las fichas de exploración y el diagrama de capas gana sangría. */
+@media (min-width: 50rem) {
+    .portada {
+        grid-template-columns: 1.4fr 1fr;
+    }
+    .franja-ideas {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .enlaces-explora {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 24rem) {
+    .menu a {
+        padding-inline: 0.6rem;
+    }
+    .caso-cuerpo {
+        padding: 1.4rem;
+    }
+}
