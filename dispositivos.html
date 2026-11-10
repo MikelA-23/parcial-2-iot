@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tabla comparativa de dispositivos IoT: qué miden, en qué sector se usan y un ejemplo concreto de cada uno.">
+    <title>Dispositivos | IoT Lab</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <a class="enlace-salto" href="#contenido">Saltar al contenido</a>
+    <header class="cabecera">
+        <div class="contenedor diseno-cabecera">
+            <a class="marca" href="index.html"><span class="marca-icono" aria-hidden="true">⬡</span> IOT LAB<span class="marca-subtitulo">Sensores en acción</span></a>
+            <nav aria-label="Navegación principal">
+                <ul class="menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="dispositivos.html" class="activo" aria-current="page">Dispositivos</a></li>
+                    <li><a href="casos-de-uso.html">Casos de uso</a></li>
+                    <li><a href="arquitectura.html">Arquitectura</a></li>
+                    <li><a href="video.html">Video</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main id="contenido" class="contenedor" tabindex="-1">
+        <section class="intro-pagina" aria-labelledby="dispositivos-titulo"><p class="etiqueta">CINCO SECTORES, CINCO SENSORES</p><h1 id="dispositivos-titulo">Dispositivos que ya trabajan por ti.</h1><p class="intro">Cada fila es un dispositivo real, el dato que mide y un ejemplo de cómo actúa sin intervención humana.</p></section>
+
+        <div class="tabla-envoltorio">
+            <table class="tabla-dispositivos">
+                <caption class="tabla-titulo">Comparación de dispositivos IoT por sector</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Dispositivo</th>
+                        <th scope="col">Sector</th>
+                        <th scope="col">Qué mide</th>
+                        <th scope="col">Ejemplo de acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Termostato inteligente</th>
+                        <td>Hogar</td>
+                        <td>Temperatura ambiente y horarios de uso</td>
+                        <td>Baja la calefacción cuando no hay nadie en casa.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Pulsera de actividad</th>
+                        <td>Salud</td>
+                        <td>Ritmo cardíaco y pasos diarios</td>
+                        <td>Envía una alerta si el pulso supera un límite seguro.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Sensor de humedad de suelo</th>
+                        <td>Agricultura</td>
+                        <td>Humedad de la tierra en el cultivo</td>
+                        <td>Activa el riego solo cuando el suelo lo necesita.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Semáforo adaptativo</th>
+                        <td>Ciudad</td>
+                        <td>Flujo de vehículos y peatones</td>
+                        <td>Alarga el verde en la vía con más tráfico real.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Sensor de vibración</th>
+                        <td>Industria</td>
+                        <td>Vibración y temperatura de una máquina</td>
+                        <td>Avisa a mantenimiento antes de que la pieza falle.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <section class="seccion" aria-labelledby="lectura-titulo">
+            <div class="seccion-cabecera"><p class="etiqueta">CÓMO LEER LA TABLA</p><h2 id="lectura-titulo">El patrón se repite en cada fila.</h2></div>
+            <p class="intro parrafo-ancho">Todos estos dispositivos siguen el mismo patrón: un sensor mide una variable física, un sistema compara ese valor contra una regla o un umbral, y el dispositivo actúa sin que una persona lo revise manualmente. Ese ciclo completo se explica en la página de <a href="arquitectura.html">arquitectura</a>.</p>
+        </section>
+    </main>
+    <footer class="pie">
+        <div class="contenedor diseno-pie"><p>IoT Lab · Sensores en acción</p><p>Proyecto académico sobre Internet de las Cosas</p><a href="#contenido">Volver al contenido ↑</a></div>
+    </footer>
+</body>
+</html>
